@@ -1,0 +1,26 @@
+{
+  "name": "typescript-overthrow",
+  "version": "1.0.0",
+  "description": "Will TypeScript Overthrow JavaScript? A look at the road ahead for FED (front-end development).",
+  "main": "index.html",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/droopert/typescript-overthrow.git"
+  },
+  "keywords": [
+    "typescript",
+    "javascript",
+    "front-end development",
+		"static types"
+  ],
+  "author": "Droopert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/droopert/typescript-overthrow/issues"
+  },
+  "homepage": "https://github.com/droopert/typescript-overthrow#readme",
+  "dependencies": {
+    "reveal.js": "^3.7.0"
+  }
+}
