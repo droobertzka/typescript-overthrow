@@ -51,7 +51,7 @@
 				<!-- * SLIDE 1 * -->
 				<!-- *********** -->
 				<!-- * Title * -->
-				<section>
+				<section class="slide--title">
 					<h1>Will TypeScript Overthrow JavaScript?</h1>
 					<hr class="hr-insignia hr-insignia--short"/>
 					<p>by Andrew Barrette</p>
@@ -60,7 +60,151 @@
 
 
 				<!-- *********** -->
-				<!-- * SLIDE 2 * -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section>
+					<h2>The JavaScript Throne</h2>
+					<h3>🏰</h3>
+					<code class="standalone">Object.defineProperties(js, {</code>
+					<ul class="code">
+						<li>#1 most contributors 4 years <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018</a>)</small>,</li>
+						<li>#1 most used 6 years <small>(<a href="https://insights.stackoverflow.com/survey/2018#technology">Stack Overflow, 2018 Survey</a>)</small>,</li>
+						<li>10 million + users & largest OSS registry <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef">npm - 800K+</a>)</small>,</li>
+						<li>Browsers, Servers, Mobile, IoT... <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef">npm - 93/70/44/6</a>)</small>,</li>
+						<li>Battle tested (Framework Wars)</li>
+					</ul>
+					<code class="standalone">])</code>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section>
+					<h2><em>And Still...</em></h2>
+					<p class="fragment" data-fragment-index="0"><img src="./images/js-typeerror.png" /></p>
+					<div class="fragment" data-fragment-index="2">
+						<h2><em>...We Persist!</em></h2>
+						<ol>
+							<li>Pairing, Code Reviews, Pull Requests</li>
+							<li>TDD (unit, integration, E2E)</li>
+							<li>Linting</li>
+						</ol>
+					</div>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section>
+					<h2>Behold, A Hero Approaches!</h2>
+					<p><img src="./images/lancelot-charge.gif"/></p>
+					<p><em>C#? Java? ...No!</em></p>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section data-transition="slide-in fade-out">
+					<h2>Tis I, TypeScript!</h2>
+					<hr class="hr-insignia"/>
+					<code class="standalone">Promise.all([</code>
+					<ul class="code">
+						<li>3rd fastest growing <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018</a>)</small>,</li>
+						<li>#7 most contributors <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018 up from #10</a>)</small>,</li>
+						<li>"Breath. Of. Fresh. Air." <small>(<a href="https://medium.com/paypal-engineering/why-every-new-web-app-at-paypal-starts-with-typescript-9d1acc07c839">Kent C. Dodds, RE: TS in paypal-scripts</a>)</small>,</li>
+						<li>"Someone...will bring in TS [in 2019]" <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef#2a16">npm</a>)</small>,</li>
+						<li>VS Code, Vue 3.0, Yarn 2.0,</li>
+					</ul>
+					<code class="standalone">])</code>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section data-transition="fade-in slide-out">
+					<h2>...with Great Tidings!</h2>
+					<hr class="hr-insignia"/>
+					<code class="standalone">Promise.all([</code>
+					<ul class="code">
+						<li>JavaScript that scales,</li>
+						<li>More self documenting / Easier to understand,</li>
+						<li>Eliminate entire categories of bugs,</li>
+						<li>Less guards in code,</li>
+						<li>Less tests to write</li>
+					</ul>
+					<code class="standalone">])</code>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section>
+					<h2>So...umm... <small>🤔</small></h2>
+					<hr class="hr-insignia"/>
+					<code class="standalone">.then(</code>
+					<ul class="code">
+						<li>"Why would you <em>NOT</em> use TypeScript?" <small>(<a href="http://jonathancreamer.com/why-would-you-not-use-typescript/">some article</a>)</small></li>
+					</ul>
+					<code class="standalone">)</code>
+					<div class="fragment" data-fragment-index="0">
+						<p>Why <em>WOULD</em> I use TypeScript?</p>
+						<p>Should I use TypeScript?</p>
+						<p>Should I <em>NOT</em> use JavaScript?</p>
+					</div>
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<section>
+					<h2>Talking Types</h2>
+					<hr class="hr-insignia"/>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<!-- <section>
+					<h2><em>Choose One:</em></h2>
+					<ul class="small">
+						<li><b>A.)</b> The crowd hisses and boos, shaking their fists as the knight gallops away...</li>
+						<li><b>B.)</b> Cheers fill the air! They lay down arms & follow the knight into the sunset...</li>
+						<li><b>C.)</b> A lengthy debate ensues over supreme ECMAScript power deriving from a mandate of the masses. The knight grows tired and rides on...</li>
+					</ul>
+					<aside class="notes"></aside>
+				</section> -->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<!-- * Agenda * -->
 				<section>
@@ -70,17 +214,13 @@
 						<li>and this second thing</li>
 					</ol>
 					<hr class="hr-insignia"/>
-
 					<h2><em>WE WILL NOT...</em></h2>
 					<ol>
 						<li>do this first thing</li>
 						<li>or this second thing</li>
 					</ol>
 
-					<aside class="notes">
-						<p>here are some notes</p>
-						<p>more notes are down here</p>
-					</aside>
+					<aside class="notes"> </aside>
 				</section>
 
 
@@ -139,7 +279,6 @@ function linkify(selector) {
 				<!-- *********** -->
 				<section>
 					<p class="insignia insignia--large insignia--end"></p>
-					<hr class="hr-insignia"/>
 					<h2>Thank You!</h2>
 				</section>
 
