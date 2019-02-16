@@ -34,6 +34,11 @@ body {
   color: #565656;
 }
 
+.reveal section img {
+	border: none;
+	box-shadow: none;
+}
+
 .reveal a {
 	color: #78b9e6;
 }
@@ -53,7 +58,8 @@ body {
 }
 
 .reveal ul.code {
-	left: .8em;
+	display: block;
+	margin-left: 1.8em;
 }
 
 .reveal small {
@@ -89,6 +95,10 @@ body {
 .reveal h2 small {
 	vertical-align: middle;
 	font-size: .7em;
+}
+
+.reveal h2.short {
+	margin-bottom: 5px;;
 }
 
 .reveal .controls {
@@ -155,4 +165,29 @@ ul li {
 
 .reveal p.short {
   margin: 5px 0 0;
+}
+
+.reveal thead {
+	font-weight: bold;
+}
+
+.reveal del {
+	color: #aaa;
+}
+
+.reveal .grail-wrapper {
+	display: inline-block;
+	box-shadow: inset 0 0 4vh 3vh #fff;
+}
+
+.reveal img.grail {
+	max-height: 10vh;
+	margin: 0;
+	position: relative;
+	z-index: -2;
+	vertical-align: middle;
+}
+
+h1.vert-align {
+	line-height: 50vh;
 }

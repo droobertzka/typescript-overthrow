@@ -1,3 +1,193 @@
 <!-- ********** -->
 <!-- * UNUSED * -->
 <!-- ********** -->
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Type Systems - Explicit / Inferred, Structural / Nominal * -->
+				<!-- LATER
+				<section data-transition="fade-in slide-out">
+					<h2>Common Ground</h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<table>
+						<thead>
+							<tr>
+								<td>JavaScript</td>
+								<td>TypeScript</td>
+								<td>Java</td>
+								<td>Elm</td>
+							</tr>
+						</thead>
+						<tbody>
+							</tr>
+							<tr>
+								<td><del>Weak</del></td>
+								<td><del>Strong</del></td>
+								<td><del>Strong</del></td>
+								<td><del>Strong</del></td>
+							</tr>
+							<tr>
+								<td>Dynamic</td>
+								<td>Static</td>
+								<td>Static</td>
+								<td>Static</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="0">
+								<td>-</td>
+								<td>Inference</td>
+								<td>Explicit</td>
+								<td>Inference</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="1">
+								<td>Duck Typing</td>
+								<td>Structural</td>
+								<td>Nominal</td>
+								<td>Structural</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<aside class="notes"></aside>
+				</section>
+				-->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<!-- <section>
+					<h2><em>And Still...</em></h2>
+					<p class="fragment" data-fragment-index="0"><img src="./images/js-typeerror.png" /></p>
+					<div class="fragment" data-fragment-index="2">
+						<h2><em>...We Persist!</em></h2>
+						<ol>
+							<li>Pairing, Code Reviews, Pull Requests</li>
+							<li>TDD (unit, integration, E2E)</li>
+							<li>Linting</li>
+						</ol>
+					</div>
+
+					<aside class="notes"></aside>
+				</section> -->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Intro * -->
+				<!-- <section>
+					<h2>So...umm... <small>🤔</small></h2>
+					<hr class="hr-insignia"/>
+					<code class="standalone">.then(</code>
+					<ul class="code">
+						<li>"Why would you <em>NOT</em> use TypeScript?" <small>(<a href="http://jonathancreamer.com/why-would-you-not-use-typescript/">some article</a>)</small></li>
+					</ul>
+					<code class="standalone">)</code>
+					<div class="fragment" data-fragment-index="0">
+						<p>Why <em>WOULD</em> I use TypeScript?</p>
+						<p><em>Should</em> I use TypeScript?</p>
+						<p>Should I <em>NOT</em> use JavaScript?</p>
+					</div>
+					<aside class="notes"></aside>
+				</section> -->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!--
+				<section data-transition="slide-in fade-out">
+					<h2><em>The Thing</em> About TypeScript</h2>
+
+					<hr class="hr-insignia"/>
+					<pre><code class="hljs" data-trim>
+const greet = ({ name }) => `Hello, ${name}!`
+
+const drew = {
+  nmae: 'Drew',
+  age: 33
+}
+
+greet(drew) // -> ???
+					</code></pre>
+					<code class="standalone fragment" data-fragment-index="0">
+						// JS: -> "Hello, undefined"
+					</code>
+				</section>
+			-->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * TypeScript * -->
+				<!-- <section data-transition="slide-in fade-out">
+					<h2><em>The Thing</em> About TypeScript</h2>
+
+					<hr class="hr-insignia"/>
+
+					<p>Picture of TS code & compile errors</p>
+
+					<p>Later, explain how the compiler still outputs assets
+						and how even a dynamic language can be given tools to
+						help infer information and do type checking at dev time</p>
+
+					<aside class="notes"> </aside>
+				</section> -->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Type Systems * -->
+				<!-- <section data-transition="fade-in slide-out">
+					<h2>Static</h2>
+					<ul>
+						<li>Syntax for declaring relationship between code & type info</li>
+						<li class="fragment" data-fragment-index="0">
+							↳ <b>Explicit:</b> declarations, annotations, signatures
+						</li>
+						<li class="fragment" data-fragment-index="0">
+							↳ <b>Inference:</b> source code analysis
+						</li>
+					</ul>
+					<hr class="hr-insignia"/>
+					<h2>Dynamic</h2>
+					<ul>
+						<li>Syntax for type guarding</li>
+						<li class="fragment" data-fragment-index="1">
+							↳ Code is generated to track the type of data in use
+						</li>
+						<li class="fragment" data-fragment-index="1">
+							↳ <b>Note:</b> can be compiled and/or interpreted
+						</li>
+					</ul>
+
+					<aside class="notes"></aside>
+				</section> -->
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Type Systems * -->
+				<section>
+					<h2>Static</h2>
+
+					<p>Type info tied to pieces of code can NOT change</p>
+					<p>Type checking at compile time <em>(generally)</em></p>
+					<p class="fragment" data-fragment-index="0">
+						↳ <b>Explicit</b> / <b>Inferred</b> ↳ <b>Nominal</b> / <b>Structural</b>
+					</p>
+					<hr class="hr-insignia hr-insignia--short"/>
+
+					<h2>Dynamic</h2>
+
+					<p>Allows changes to type info tied to pieces of code</p>
+					<p>Type checking during execution <em>(generally)</em></p>
+
+					<aside class="notes"></aside>
+				</section>

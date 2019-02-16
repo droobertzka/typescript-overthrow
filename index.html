@@ -48,11 +48,12 @@
 
 
 				<!-- *********** -->
-				<!-- * SLIDE 1 * -->
+				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<!-- * Title * -->
 				<section class="slide--title">
 					<h1>Will TypeScript Overthrow JavaScript?</h1>
+
 					<hr class="hr-insignia hr-insignia--short"/>
 					<p>by Andrew Barrette</p>
 					<p><small>February 2019</small></p>
@@ -62,19 +63,144 @@
 				<!-- *********** -->
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
-				<!-- * Intro * -->
+				<!-- * Agenda * -->
 				<section>
-					<h2>The JavaScript Throne</h2>
-					<h3>🏰</h3>
-					<code class="standalone">Object.defineProperties(js, {</code>
-					<ul class="code">
-						<li>#1 most contributors 4 years <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018</a>)</small>,</li>
-						<li>#1 most used 6 years <small>(<a href="https://insights.stackoverflow.com/survey/2018#technology">Stack Overflow, 2018 Survey</a>)</small>,</li>
-						<li>10 million + users & largest OSS registry <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef">npm - 800K+</a>)</small>,</li>
-						<li>Browsers, Servers, Mobile, IoT... <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef">npm - 93/70/44/6</a>)</small>,</li>
-						<li>Battle tested (Framework Wars)</li>
-					</ul>
-					<code class="standalone">])</code>
+					<h2 class="short">The Goal</h2>
+
+					<ol>
+						<li>Lightly compare JS & TS</li>
+						<li>Establish Type System vocab</li>
+						<li>Examine assumptions & ideas</li>
+						<li>Consider context</li>
+					</ol>
+
+					<br>
+					<br>
+					<h2 class="fragment short" data-fragment-index="0">
+						<em>NOT The Goal...</em>
+					</h2>
+					<ol class="fragment" data-fragment-index="0">
+						<li>Learn TypeScript</li>
+						<li>Deep dive Types or JS/TS features </li>
+						<li>💩 on <em>either</em> JS or TS</li>
+						<li>Proclaim expertise or authority</li>
+					</ol>
+
+					<aside class="notes"> </aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Warning * -->
+				<section>
+					<h2>I Come In Peace ✌️</h2>
+
+					<hr class="hr-insignia"/>
+
+					<ol>
+						<li>Passionate subject, strong opinions</li>
+						<li class="fragment" data-fragment-index="0">Confusing & complex</li>
+						<li class="fragment" data-fragment-index="0">Conflicting definitions & information
+							<ul class="fragment" data-fragment-index="1">
+								<li>↳ Lots of misconceptions and fallacies</li>
+								<li>↳ I will probably get some things wrong</li>
+							</ul>
+						</li>
+					</ol>
+
+					<aside class="notes"> </aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Type Systems  - Strong/Weak * -->
+				<section data-transition="slide-in fade-out">
+					<h2>Common Ground</h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<table>
+						<thead>
+							<tr>
+								<td>JavaScript</td>
+								<td>TypeScript</td>
+								<td>Java</td>
+								<td>Elm</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Weak</td>
+								<td>Strong</td>
+								<td>Strong</td>
+								<td>Strong</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="fragment" data-fragment-index="0" style="padding-top: .5em">
+						<ol style="font-size: 80%">
+							<li>What to know before debating type systems <small>(<a href="http://blogs.perl.org/users/ovid/2010/08/what-to-know-before-debating-type-systems.html">Chris Smith F#?</a>)</small></li>
+							<li>JavaScript's type system <small>(<a href="http://2ality.com/2013/09/types.html">Dr. Axel Raushmayer</a>)</small></li>
+							<li>Stack Overflow explanation <small>(<a href="https://stackoverflow.com/questions/2690544/what-is-the-difference-between-a-strongly-typed-language-and-a-statically-typed">some professor</a>)</small></li>
+							<li>Wiki: Type system <small>(<a href="https://en.wikipedia.org/wiki/Type_system#Strong_and_weak_type_systems">"no universally accepted definition"</a>)</small></li>
+							<li>Wiki: Strong & weak typing <small>(<a href="https://en.wikipedia.org/wiki/Strong_and_weak_typing">note: "colloquially", "generally"</a>)</small></li>
+						</ol>
+					</div>
+
+					<aside class="notes">
+						<p>These terms are used a lot colloquially, but are subjective
+							and have little useful meaning other than conveying how the
+							speaker <em>feels</em> about the type system or language.
+						</p>
+					</aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Type Systems - Static / Dynamic * -->
+				<section data-transition="fade-in slide-out">
+					<h2>Common Ground</h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<table>
+						<thead>
+							<tr>
+								<td>JavaScript</td>
+								<td>TypeScript</td>
+								<td>Java</td>
+								<td>Elm</td>
+							</tr>
+						</thead>
+						<tbody>
+							</tr>
+							<tr>
+								<td><del>Weak</del></td>
+								<td><del>Strong</del></td>
+								<td><del>Strong</del></td>
+								<td><del>Strong</del></td>
+							</tr>
+							<tr class="fragment" data-fragment-index="0">
+								<td>Dynamic</td>
+								<td>Static</td>
+								<td>Static</td>
+								<td>Static</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="fragment" data-fragment-index="0" style="padding-top: .5em">
+						<ol>
+							<li><b>Static:</b> type checking at compile time, can NOT change<sup><small>*</small></sup> <!--<small>(<a href=""></a>)</small>--></li>
+							<li><b>Dynamic:</b> type checking at run time, allows changes<sup><small>*</small></sup> <!--<small>(<a href=""></a>)</small>--></li>
+						</ol>
+						<small><em><sup>*</sup>discussion of nuances not included</em></small>
+					</div>
 
 					<aside class="notes"></aside>
 				</section>
@@ -83,20 +209,93 @@
 				<!-- *********** -->
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
+				<section data-transition="slide-in fade-out">
+					<h1 class="vert-align">Context</h1>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * JS Users * -->
+				<section data-transition="slide-in fade-out">
+					<h2>Rapid Growth</h1>
+					<img src="./images/js-growing.jpeg" style="max-height: 40vh;"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * JS Users * -->
+				<section data-transition="fade-in slide-out">
+					<h2>Diverse Users</h1>
+					<img src="./images/js-convergence.jpeg" style="max-height: 40vh;"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
 				<!-- * Intro * -->
 				<section>
-					<h2><em>And Still...</em></h2>
-					<p class="fragment" data-fragment-index="0"><img src="./images/js-typeerror.png" /></p>
-					<div class="fragment" data-fragment-index="2">
-						<h2><em>...We Persist!</em></h2>
-						<ol>
-							<li>Pairing, Code Reviews, Pull Requests</li>
-							<li>TDD (unit, integration, E2E)</li>
-							<li>Linting</li>
-						</ol>
-					</div>
+					<h2>The Throne is Nigh! <span class="grail-wrapper"><img class="grail" src="./images/holy-grail.png"/></span></h2>
+
+					<code class="standalone">try {</code>
+					<code class="standalone">&nbsp;&nbsp;Object.defineProperties(js, {</code>
+					<ul class="code">
+						<li>#1 most contributors 4 years <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018</a>)</small>,</li>
+						<li>#1 most used 6 years <small>(<a href="https://insights.stackoverflow.com/survey/2018#technology">Stack Overflow, 2018 Survey</a>)</small>,</li>
+						<li>10 million + users & largest OSS registry <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef">npm - 800K+</a>)</small>,</li>
+						<li>Browsers, Servers, Mobile, IoT... <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef">npm - 93/70/44/6</a>)</small></li>
+					</ul>
+					<code class="standalone">&nbsp;&nbsp;})</code>
+					<code class="standalone">} catch (fatigue) { ... } finally {</code>
+					<ul class="code">
+						<li>Dust is settling...</li>
+					</ul>
+					<code class="standalone">}</code>
 
 					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>The Thing About <u>JavaScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/js-dynamic.png"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>The Thing About <u>JavaScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/js-err-1.png"/>
+					<code class="standalone fragment" data-fragment-index="0">
+						// -> "Hello, undefined"
+					</code>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>The Thing About <u>JavaScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/js-err-2.png"/>
+					<code class="standalone error fragment" data-fragment-index="0">
+						// -> Uncaught TypeError: Cannot destructure property `name` of 'undefined' or 'null'.
+					</code>
 				</section>
 
 
@@ -126,7 +325,7 @@
 						<li>#7 most contributors <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018 up from #10</a>)</small>,</li>
 						<li>"Breath. Of. Fresh. Air." <small>(<a href="https://medium.com/paypal-engineering/why-every-new-web-app-at-paypal-starts-with-typescript-9d1acc07c839">Kent C. Dodds, RE: TS in paypal-scripts</a>)</small>,</li>
 						<li>"Someone...will bring in TS [in 2019]" <small>(<a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef#2a16">npm</a>)</small>,</li>
-						<li>VS Code, Vue 3.0, Yarn 2.0,</li>
+						<li>VS Code, Vue 3.0, Yarn 2.0</li>
 					</ul>
 					<code class="standalone">])</code>
 
@@ -144,12 +343,16 @@
 					<code class="standalone">Promise.all([</code>
 					<ul class="code">
 						<li>JavaScript that scales,</li>
-						<li>More self documenting / Easier to understand,</li>
+						<li>More self documenting / easier to understand,</li>
 						<li>Eliminate entire categories of bugs,</li>
-						<li>Less guards in code,</li>
-						<li>Less tests to write</li>
+						<li>Write less tests and guards</li>
 					</ul>
-					<code class="standalone">])</code>
+					<code class="standalone">])<span class="fragment" data-fragment-index="0">.then(</span></code>
+					<ul class="code fragment" data-fragment-index="0">
+						<li>"Why would you <em>NOT</em> use TypeScript?" <small>(<a href="http://jonathancreamer.com/why-would-you-not-use-typescript/">some article</a>)</small>,</li>
+						<li>Should I <em>STOP</em> using JavaScript?</li>
+					</ul>
+					<code class="standalone fragment" data-fragment-index="0">)</code>
 
 					<aside class="notes"></aside>
 				</section>
@@ -158,33 +361,55 @@
 				<!-- *********** -->
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
-				<!-- * Intro * -->
-				<section>
-					<h2>So...umm... <small>🤔</small></h2>
-					<hr class="hr-insignia"/>
-					<code class="standalone">.then(</code>
-					<ul class="code">
-						<li>"Why would you <em>NOT</em> use TypeScript?" <small>(<a href="http://jonathancreamer.com/why-would-you-not-use-typescript/">some article</a>)</small></li>
-					</ul>
-					<code class="standalone">)</code>
-					<div class="fragment" data-fragment-index="0">
-						<p>Why <em>WOULD</em> I use TypeScript?</p>
-						<p>Should I use TypeScript?</p>
-						<p>Should I <em>NOT</em> use JavaScript?</p>
-					</div>
-					<aside class="notes"></aside>
+				<section data-transition="slide-in fade-out">
+					<h2>The Thing About <u>TypeScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/js-err-1.png"/>
 				</section>
 
 
 				<!-- *********** -->
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
-				<!-- * Intro * -->
-				<section>
-					<h2>Talking Types</h2>
-					<hr class="hr-insignia"/>
+				<section data-transition="fade-in fade-out">
+					<h2>The Thing About <u>TypeScript</u></h2>
 
-					<aside class="notes"></aside>
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/ts-err-1A.png" style="position: relative; top: -.7em"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section data-transition="fade-in fade-out">
+					<h2>The Thing About <u>TypeScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/ts-err-1B.png"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section data-transition="fade-in slide-out">
+					<h2>The Thing About <u>TypeScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/ts-err-1C.png"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>The Thing About <u>TypeScript</u></h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<img src="./images/ts-err-2.png"/>
 				</section>
 
 
@@ -201,52 +426,6 @@
 					</ul>
 					<aside class="notes"></aside>
 				</section> -->
-
-
-				<!-- *********** -->
-				<!-- * SLIDE # * -->
-				<!-- *********** -->
-				<!-- * Agenda * -->
-				<section>
-					<h2>We Will Examine</h2>
-					<ol>
-						<li>this first thing</li>
-						<li>and this second thing</li>
-					</ol>
-					<hr class="hr-insignia"/>
-					<h2><em>WE WILL NOT...</em></h2>
-					<ol>
-						<li>do this first thing</li>
-						<li>or this second thing</li>
-					</ol>
-
-					<aside class="notes"> </aside>
-				</section>
-
-
-				<!-- *********** -->
-				<!-- * SLIDE # * -->
-				<!-- *********** -->
-				<section data-transition="slide-in fade-out">
-					<h2>Some Code</h2>
-					<p>Get syntax highlighting working</p>
-
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify(selector) {
-  if (supports3DTransforms) {
-    var nodes = document.querySelectorAll(selector);
-
-    for (var i = 0, len = nodes.length; i &lt; len; i++) {
-      var node = nodes[i];
-
-      if(!node.className) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-				</section>
 
 
 				<!-- *********** -->
