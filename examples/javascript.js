@@ -1,13 +1,18 @@
-
+// Dynamic
 let drew = true
 drew = 'Drew'
 drew = { name: drew }
 drew.age = '33'
 
-let oldAge = drew.age * 2 + '' // -> String: '66'
-let fortyTwo = '22' * '2' - 2 // -> Number: 42
+// Implicit Coercion
+'33' * 2 + '' // -> String: '66'
+'22' * '2' - 2 // -> Number: 42
+[1,2,3] + 4 // -> String: '1,2,34'
+true / 2 // -> Number: 0.5
+false * 8 // -> Number: 0
+![].length // -> Boolean: true
 
-const anon = { name: '', age: 0 }
+const anonymous = { name: '', age: 0 }
 const isAnon = person => !person.name && !person.age
 
 isAnon(anon) // -> Boolean: true
