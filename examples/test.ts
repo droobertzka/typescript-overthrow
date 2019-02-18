@@ -1,3 +1,36 @@
+type Person = { name: string, age: number }
+const greet = ({ name }: Person) => `Hello, ${name}!`
+
+const people: Person[] = [
+  { name: 'Fry', age: 24 },
+  { name: 'Leela', age: 27 }
+]
+
+const foundDrew = people.find(x => x.name === 'Drew')
+greet(foundDrew)
+
+
+// 3. Explicitly typed
+/*
+type Person = { name: string, age: number }
+
+const greet = ({ name }: Person) => `Hello, ${name}!`
+
+const drew: Person = {
+  nmae: 'Drew',
+  age: 33
+}
+const people: Person[] = [
+  { name: 'Fry', age: 24 },
+  { name: 'Leela', age: 27 }
+]
+
+const foundDrew = people.find(x => x.nmae === 'Drew')
+greet(foundDrew)
+*/
+
+// 1. simple misspelling
+/*
 const greet = ({ name }) => `Hello, ${name}!`
 
 const drew = {
@@ -6,6 +39,7 @@ const drew = {
 }
 
 greet(drew) // -> ???
+*/
 
 
 // 2. add type & annotations & find error earlier
@@ -47,6 +81,9 @@ greet(drew)
 
 
 
+
+
+// Unused stuff:
 /*
 var add = function(x, y) {
     return parseInt(x + y, 10)
