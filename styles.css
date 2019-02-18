@@ -70,6 +70,11 @@ body {
 	font-size: .6em;
 }
 
+.reveal blockquote {
+	margin: 0;
+	width: 85%;
+}
+
 .reveal code.standalone {
 	color: #ecab48;
 	font-size: .7em;
@@ -130,8 +135,12 @@ body {
     background: white;
 }
 
-hr.hr-insignia--short {
+hr.hr-insignia--short, hr.hr-insignia--shorter {
   margin: 45px 60px 15px;
+}
+
+hr.hr-insignia--shorter {
+	margin-top: 30px;
 }
 
 .insignia.insignia--large:after {
@@ -190,4 +199,13 @@ ul li {
 
 h1.vert-align {
 	line-height: 50vh;
+}
+
+.reveal section img.inline {
+	max-width: 150px;
+	margin: 0;
+}
+
+.reveal .comfy li {
+	margin-bottom: .5em;
 }

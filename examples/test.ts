@@ -1,3 +1,14 @@
+// Complexity of reduce annotations
+/*
+reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T;
+reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T, initialValue: T): T;
+reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U, initialValue: U): U;
+// reduce :: ((a, b) -> a) -> a -> [b] -> a 
+*/
+
+
+// 4. Error TS won't find
+/*
 type Person = { name: string, age: number }
 const greet = ({ name }: Person) => `Hello, ${name}!`
 
@@ -8,6 +19,7 @@ const people: Person[] = [
 
 const foundDrew = people.find(x => x.name === 'Drew')
 greet(foundDrew)
+*/
 
 
 // 3. Explicitly typed

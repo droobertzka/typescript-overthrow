@@ -70,8 +70,8 @@
 					<ol>
 						<li>Lightly compare JS & TS</li>
 						<li>Establish Type System vocab</li>
-						<li>Examine assumptions & ideas</li>
 						<li>Consider context</li>
+						<li>Examine assumptions & ideas</li>
 					</ol>
 
 					<br>
@@ -97,7 +97,7 @@
 				<section>
 					<h2>I Come In Peace ✌️</h2>
 
-					<hr class="hr-insignia"/>
+					<hr class="hr-insignia hr-insignia--shorter"/>
 
 					<ol>
 						<li>Passionate subject, strong opinions</li>
@@ -121,7 +121,7 @@
 				<section data-transition="slide-in fade-out">
 					<h2>Common Ground</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
+					<hr class="hr-insignia hr-insignia--shorter"/>
 					<table>
 						<thead>
 							<tr>
@@ -167,7 +167,7 @@
 				<section data-transition="fade-in slide-out">
 					<h2>Common Ground</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
+					<hr class="hr-insignia hr-insignia--shorter"/>
 					<table>
 						<thead>
 							<tr>
@@ -196,11 +196,58 @@
 
 					<div class="fragment" data-fragment-index="0" style="padding-top: .5em">
 						<ol>
-							<li><b>Static:</b> type checking at compile time, can NOT change<sup><small>*</small></sup> <!--<small>(<a href=""></a>)</small>--></li>
-							<li><b>Dynamic:</b> type checking at run time, allows changes<sup><small>*</small></sup> <!--<small>(<a href=""></a>)</small>--></li>
+							<li><b>Dynamic:</b> type checking at run time, allows changes<sup><small>*</small></sup></li>
+							<li><b>Static:</b> type checking at compile time, can NOT change<sup><small>*</small></sup></li>
 						</ol>
 						<small><em><sup>*</sup>discussion of nuances not included</em></small>
 					</div>
+
+					<aside class="notes"></aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>The Thing About <u>JavaScript</u> 🤗</h2>
+
+					<img src="./images/js-dynamic.png"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Type Systems - Type Coercion * -->
+				<section>
+					<h2>Common Ground</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<table>
+						<thead>
+							<tr>
+								<td>JavaScript</td>
+								<td>TypeScript</td>
+								<td>Java</td>
+								<td>Elm</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Dynamic</td>
+								<td>Static</td>
+								<td>Static</td>
+								<td>Static</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="0">
+								<td>Coercion</td>
+								<td>(Explicit)</td>
+								<td>(Explicit)</td>
+								<td>(Explicit)</td>
+							</tr>
+						</tbody>
+					</table>
 
 					<aside class="notes"></aside>
 				</section>
@@ -220,7 +267,7 @@
 				<!-- * JS Users * -->
 				<section data-transition="slide-in fade-out">
 					<h2>Rapid Growth</h1>
-					<img src="./images/js-growing.jpeg" style="max-height: 40vh;"/>
+					<img src="./images/js-growing.jpeg" style="max-height: 50vh;"/>
 				</section>
 
 
@@ -230,7 +277,7 @@
 				<!-- * JS Users * -->
 				<section data-transition="fade-in slide-out">
 					<h2>Diverse Users</h1>
-					<img src="./images/js-convergence.jpeg" style="max-height: 40vh;"/>
+					<img src="./images/js-convergence.jpeg" style="max-height: 50vh;"/>
 				</section>
 
 
@@ -263,11 +310,18 @@
 				<!-- *********** -->
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
-				<section>
-					<h2>The Thing About <u>JavaScript</u></h2>
-
-					<hr class="hr-insignia hr-insignia--short"/>
-					<img src="./images/js-dynamic.png"/>
+				<section data-transition="slide-in fade-out">
+					<h2>Context</h2>
+					<ol>
+						<li>Flexible <small>(Dynamic, Multi Paradigm)</small></li>
+						<li>Forgiving <small>(Coercion)</small></li>
+						<li>Approachable & Open Source</li>
+						<li>Diverse users</li>
+						<li>Diverse, new, old ideas</li>
+						<li>Massive ecosystem</li>
+						<li>Used everywhere by everyone</li>
+						<li>Quick adoption (+ Fatigue)</li>
+					</ol>
 				</section>
 
 
@@ -275,9 +329,8 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section>
-					<h2>The Thing About <u>JavaScript</u></h2>
+					<h2>The Thing About <u>JavaScript</u> 🤬</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
 					<img src="./images/js-err-1.png"/>
 					<code class="standalone fragment" data-fragment-index="0">
 						// -> "Hello, undefined"
@@ -289,9 +342,8 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section>
-					<h2>The Thing About <u>JavaScript</u></h2>
+					<h2>The Thing About <u>JavaScript</u> 🤬</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
 					<img src="./images/js-err-2.png"/>
 					<code class="standalone error fragment" data-fragment-index="0">
 						// -> Uncaught TypeError: Cannot destructure property `name` of 'undefined' or 'null'.
@@ -318,7 +370,8 @@
 				<!-- * Intro * -->
 				<section data-transition="slide-in fade-out">
 					<h2>Tis I, TypeScript!</h2>
-					<hr class="hr-insignia"/>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
 					<code class="standalone">Promise.all([</code>
 					<ul class="code">
 						<li>3rd fastest growing <small>(<a href="https://octoverse.github.com/projects#languages">GitHub, 2018</a>)</small>,</li>
@@ -339,7 +392,8 @@
 				<!-- * Intro * -->
 				<section data-transition="fade-in slide-out">
 					<h2>...with Great Tidings!</h2>
-					<hr class="hr-insignia"/>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
 					<code class="standalone">Promise.all([</code>
 					<ul class="code">
 						<li>JavaScript that scales,</li>
@@ -362,10 +416,10 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section data-transition="slide-in fade-out">
-					<h2>The Thing About <u>TypeScript</u></h2>
+					<h2>The Thing About <u>TypeScript</u> 🤩</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
-					<img src="./images/js-err-1.png"/>
+					<img src="./images/js-err-1.png" style="margin-bottom: 0;"/>
+					<p>test<b>.js</b> → test<b>.ts</b></p>
 				</section>
 
 
@@ -373,10 +427,10 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section data-transition="fade-in fade-out">
-					<h2>The Thing About <u>TypeScript</u></h2>
+					<h2>The Thing About <u>TypeScript</u> 🤩</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
-					<img src="./images/ts-err-1A.png" style="position: relative; top: -.7em"/>
+					<img src="./images/ts-err-1A.png" style="margin-bottom: 0; position: relative; top: -.7em"/>
+					<p style="margin-top: 0; position: relative; top: -1.4em">+ Compiler</p>
 				</section>
 
 
@@ -384,10 +438,20 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section data-transition="fade-in fade-out">
-					<h2>The Thing About <u>TypeScript</u></h2>
+					<h2>The Thing About <u>TypeScript</u> 🤩</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
-					<img src="./images/ts-err-1B.png"/>
+					<img src="./images/ts-err-1B.png" style="margin-bottom: 0;"/>
+					<p>+ Dev tooling</p>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section data-transition="slide-in fade-out">
+					<h2>The Thing About <u>TypeScript</u> 🤩</h2>
+
+					<img src="./images/js-err-2.png" style="margin-bottom: 0;"/>
 				</section>
 
 
@@ -395,10 +459,10 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section data-transition="fade-in slide-out">
-					<h2>The Thing About <u>TypeScript</u></h2>
+					<h2>The Thing About <u>TypeScript</u> 🤩</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
-					<img src="./images/ts-err-1C.png"/>
+					<img src="./images/ts-err-2.png"/>
+					<p><b>Inference:</b> Look, ma! No added syntax!</p>
 				</section>
 
 
@@ -406,26 +470,149 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<section>
-					<h2>The Thing About <u>TypeScript</u></h2>
+					<h2>The Thing About <u>TypeScript</u> 🤩</h2>
 
-					<hr class="hr-insignia hr-insignia--short"/>
-					<img src="./images/ts-err-2.png"/>
+					<img src="./images/ts-explicit.png"/>
+					<p><b>Explicit:</b> declarations, annotations, signatures</p>
 				</section>
 
 
 				<!-- *********** -->
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
-				<!-- * Intro * -->
-				<!-- <section>
-					<h2><em>Choose One:</em></h2>
-					<ul class="small">
-						<li><b>A.)</b> The crowd hisses and boos, shaking their fists as the knight gallops away...</li>
-						<li><b>B.)</b> Cheers fill the air! They lay down arms & follow the knight into the sunset...</li>
-						<li><b>C.)</b> A lengthy debate ensues over supreme ECMAScript power deriving from a mandate of the masses. The knight grows tired and rides on...</li>
-					</ul>
+				<!-- * Type Systems - Explicit / Inferred * -->
+				<section>
+					<h2>Common Ground</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<table>
+						<thead>
+							<tr>
+								<td>JavaScript</td>
+								<td>TypeScript</td>
+								<td>Java</td>
+								<td>Elm</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Dynamic</td>
+								<td>Static</td>
+								<td>Static</td>
+								<td>Static</td>
+							</tr>
+							<tr>
+								<td>Coercion</td>
+								<td>(Explicit)</td>
+								<td>(Explicit)</td>
+								<td>(Explicit)</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="0">
+								<td>-</td>
+								<td>Inference</td>
+								<td>Explicit</td>
+								<td>Inference</td>
+							</tr>
+							<tr class="fragment" data-fragment-index="1">
+								<td>Duck Typing</td>
+								<td>Structural</td>
+								<td>Nominal</td>
+								<td>Structural</td>
+							</tr>
+						</tbody>
+					</table>
+
 					<aside class="notes"></aside>
-				</section> -->
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>So... why would you not?</h2>
+
+					<img src="./images/ts-all-the-things.jpg"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Making Dynamic Languages Safe * -->
+				<section>
+					<h2>How did we manage?</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<ol>
+						<li class="fragment" data-fragment-index="0">type guards (typeof, instanceof)</li>
+						<li class="fragment" data-fragment-index="1">error handling (catch)</li>
+						<li class="fragment" data-fragment-index="2">JS Docs</li>
+						<li class="fragment" data-fragment-index="3">linting</li>
+						<li class="fragment" data-fragment-index="4">unit, integration, E2E tests</li>
+						<li class="fragment" data-fragment-index="5">CRs, PRs, pair/mob programming</li>
+						<li class="fragment" data-fragment-index="6">a little help from our IDE (TernJS)</li>
+					</ol>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- Static Types Can't Save us from Bugs -->
+				<section>
+					<h2>Save us! 🐛</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<img src="./images/ts-err-uncaught.png"/>
+					<code class="standalone error fragment" data-fragment-index="0">
+						// -> Uncaught TypeError: Cannot destructure property `name` of 'undefined' or 'null'.
+					</code>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- Static Types Can't Save us from Bugs -->
+				<section>
+					<h2>Save us! 🐛</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<ol class="small comfy">
+						<li>
+								"modest effects"<br>
+								"overwhelmingly dominated by [other] factors"<br>
+								"[might] be due to other, intangible[s]"
+								<a href="http://web.cs.ucdavis.edu/~filkov/papers/lang_github.pdf">
+									<small><em>(Large Scale Study...)</em></small>
+								</a>
+						</li>
+						<li style="margin-bottom: 0;">
+							<img class="inline" src="./images/bug-density-all.png"/>
+							<img class="inline" src="./images/bug-density-10-stars.png"/>
+							<img class="inline" src="./images/bug-density-100-stars.png"/><br>
+							<a href="https://labs.ig.com/static-typing-promise">
+								<small style="vertical-align: top;"><em>(The broken promise of static typing)</em></small>
+							</a>
+						</li>
+						<li>
+							<!-- <img class="inline" src="./images/bugs-caught-by-ts.png"/> -->
+							"just 38 out of 1,000 potential bugs"<br>
+							(after applying TDD, reviews, etc.)
+							<a href="https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b">
+								<small><em>(The TypeScript Tax)</em></small>
+							</a>
+						</li>
+						<li>
+							"most studies find very small effects, if any"<br>
+							"probably don't cover contexts you're actually interested in"<br>
+							<a href="http://danluu.com/empirical-pl/">
+								<small><em>(Static v. dynamic languages)</em></small>
+							</a>
+						</li>
+					</ol>
+				</section>
 
 
 				<!-- *********** -->
@@ -433,10 +620,125 @@
 				<!-- *********** -->
 				<!-- * Recap * -->
 				<section>
-					<h2>Recap: Types!</h2>
-					<hr class="hr-insignia"/>
-					<p>Pros</p>
-					<p>Cons</p>
+					<h2>The Thing About <u>TypeScript</u> 🤔</h2>
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<ol>
+						<li>
+							Limited ecosystem (definitely-typed)
+							<ul class="small">
+								<li>
+									↳ <a href="https://medium.com/npm-inc/this-year-in-javascript-2018-in-review-and-npms-predictions-for-2019-3a3d7e5298ef#4faf">
+										#1 factor
+									</a> in language selection
+								</li>
+							</ul>
+						</li>
+						<li class="fragment" data-fragment-index="0">
+							More decisions (+ mistakes)
+						</li>
+						<li class="fragment" data-fragment-index="1">
+							Limitations / struggles
+							<ul class="small">
+								<li>↳ polymorphism & generics (implied "any")</li>
+								<li>↳ higher order functions / components</li>
+							</ul>
+						</li>
+						<li class="fragment" data-fragment-index="2">
+							Typing time & maintenance
+						</li>
+						<li class="fragment" data-fragment-index="3">
+							Steeper learning curve
+							<ul class="small">
+								<li>↳ limits on recruiting</li>
+								<li>↳ training / onboarding</li>
+							</ul>
+						</li>
+						<li class="fragment" data-fragment-index="4">
+							Still JS at run time
+						</li>
+					</ol>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<!-- * Running TSC on JS * -->
+				<section data-transition="slide-in fade-out">
+					<h2>Why not both?</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<p>test<b>.js</b> → test<b>.ts</b> &nbsp;&nbsp;<code class="fragment" data-fragment-index="0">// @ts-check</code></p>
+					<img src="./images/wat.jpg"/>
+
+					<aside class="notes">
+						<ol>
+							<li>Actually, VSCode already does...</li>
+							<li>It will even try to use your JS Docs!</li>
+							<li>Plus, // @ts-check</li>
+						</ol>
+					</aside>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section data-transition="fade-in fade-out">
+					<h2>Why not both?</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<img src="./images/js-jsdocs.png"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section data-transition="fade-in slide-out">
+					<h2>Why not both?</h2>
+
+					<hr class="hr-insignia hr-insignia--shorter"/>
+					<img src="./images/js-jsdocs-vscode.png"/>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>Alternatives</h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<ul>
+						<li>Elm</li>
+						<li>ReasonML</li>
+						<li>Flow (maybe?)</li>
+						<li>sanctuary-def</li>
+						<li>rtype</li>
+					</ul>
+				</section>
+
+
+				<!-- *********** -->
+				<!-- * SLIDE # * -->
+				<!-- *********** -->
+				<section>
+					<h2>Conclusions</h2>
+
+					<hr class="hr-insignia hr-insignia--short"/>
+					<ol>
+						<li>TypeScript has benefits
+							<ul>
+								<li>↳ (less tests, dev tooling)</li>
+							</ul>
+						</li>
+						<li>Will continue to gain momentum</li>
+						<li>Can't save us from bugs</li>
+						<li>Don't ignore costs</li>
+						<li>Consider context</li>
+						<li>Learn JavaScript</li>
+					</ol>
 				</section>
 
 
@@ -448,7 +750,8 @@
 					<h2>Resources</h2>
 					<hr class="hr-insignia"/>
 					<ol class="resources-list">
-						<li><a href="https://medium.com">Medium.com</a> (place for articles), Authors</li>
+						<!-- <li><a href="https://medium.com">Medium.com</a> (place for articles), Authors</li> -->
+						<li>Will be posted...</li>
 					</ol>
 				</section>
 
@@ -466,13 +769,13 @@
 				<!-- * SLIDE # * -->
 				<!-- *********** -->
 				<!-- * Links * -->
-				<section>
+				<!-- <section>
 					<h2>Resources</h2>
 					<hr class="hr-insignia"/>
 					<ol class="resources-list">
 						<li>https://medium.com/</li>
 					</ol>
-				</section>
+				</section> -->
 			</div>
 		</div>
 
