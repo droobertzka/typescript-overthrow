@@ -1,9 +1,28 @@
+// Complexity of Higher Order Functions
+
+/** Obtain the parameters of a function type in a tuple */
+type Parameters<T extends (...args: any[]) => any> = T extends (...args: infer P) => any ? P : never;
+
+/** Obtain the return type of a function type */
+type ReturnType<T extends (...args: any[]) => any> = T extends (...args: any[]) => infer R ? R : any;
+function logDuration<T extends (...args: any[]) => any>(func: T): (...funcArgs: Parameters<T>) => ReturnType<T> {
+  const funcName = func.name;
+
+  return (...args: Parameters<T>): ReturnType<T> => {
+    console.time(funcName);
+    const results = func(...args);
+    console.timeEnd(funcName);
+    return results;
+  };
+}
+
+
 // Complexity of reduce annotations
 /*
 reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T): T;
 reduce(callbackfn: (previousValue: T, currentValue: T, currentIndex: number, array: Array<T>) => T, initialValue: T): T;
 reduce<U>(callbackfn: (previousValue: U, currentValue: T, currentIndex: number, array: Array<T>) => U, initialValue: U): U;
-// reduce :: ((a, b) -> a) -> a -> [b] -> a 
+// reduce :: ((a, b) -> a) -> a -> [b] -> a
 */
 
 
@@ -111,4 +130,3 @@ var add = function (x, y) {
 var second = add(1, 2)
 console.log('result 2', second)
 */
-
