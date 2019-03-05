@@ -213,3 +213,12 @@ h1.vert-align {
 .reveal .comfy li {
 	margin-bottom: .5em;
 }
+
+/*********************************************
+ * PRINT BACKGROUND
+ *********************************************/
+@media print {
+	.backgrounds {
+		background-color: #fff;
+	}
+}
