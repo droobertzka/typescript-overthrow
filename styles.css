@@ -168,6 +168,10 @@ hr.hr-insignia--shorter {
 	font-size: .5em;
 }
 
+.resources-list--smaller li {
+	font-size: .45em;
+}
+
 ul li {
   list-style: none;
 }
